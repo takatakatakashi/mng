@@ -1,0 +1,2 @@
+module GamblingsHelper
+end

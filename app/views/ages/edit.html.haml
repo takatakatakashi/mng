@@ -1,0 +1,8 @@
+.post
+  = form_with(model: @action, local: true) do |f|
+    %input.post__message
+    .post__mask
+      %label.post__mask__image
+      = fa_icon 'picture-o', class: 'icon'
+      %input.hidden{type: 'file'}
+      %input.post__submit{type: 'submit', value: '投稿する'}

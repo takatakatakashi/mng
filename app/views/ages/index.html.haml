@@ -1,0 +1,11 @@
+.age
+  %a{:href => "ages/new"} 投稿する
+  %a{:href => "actions/show"} 詳細をみる
+  %a{:href => "actions/edit"} 編集をする
+  %a{:href => "actions/destroy"} 削除をする
+  -# = link_to '詳細', "/actions/#{action.id}", method: :get
+  -# = link_to '編集', "actions/#{action.id}/edit", method: :get
+  -# = link_to '削除', "actions/#{action.id}", method: :delete
+  -# = link_to '削除', "/actions", method: :delete, data: { confirm: '削除しますか?' }
+  .age_1
+    %iおすすめの歴史・時代劇漫画

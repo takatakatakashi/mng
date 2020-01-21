@@ -1,0 +1,22 @@
+-# .contents.row
+-#   .action
+-#   %a{:href => "actions/new"} 投稿する
+-#   %iおすすめのアクション・アドベンチャー漫画
+-#   - @actions.each do |action|
+-#     .content_post{:style => "background-image: url(#{action.image});"}
+-#       = simple_format(action.text)
+-#       %span.name
+-#         = action.name
+.action
+  %a{:href => "actions/new"} 投稿する
+  .action_1
+  %iおすすめのアクション・アドベンチャー漫画
+  - @actions.each do |action|
+    - if action.image?
+    = image_tag action.image, :size =>'510x450'
+      .text
+        = simple_format(action.text)
+        .bottom
+          = link_to '詳細', "/actions/#{action.id}", method: :get
+          -# = link_to '編集', "actions/#{action.id}/edit", method: :get
+          -# = link_to '削除', "/actions/", method: :delete, data: { confirm: '削除しますか?' }
