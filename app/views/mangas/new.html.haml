@@ -2,5 +2,5 @@
   = form_for @manga do |f|
     = f.text_field :text
     = f.file_field :image
-    = f.select :tag, [["アクション", 1], ["SF", 2]]
+    = f.select :tag_id, [["アクション", 1], ["SF", 2]]
     = f.submit "送信"

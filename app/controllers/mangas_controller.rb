@@ -18,6 +18,6 @@ class MangasController < ApplicationController
 
   private
   def manga_params
-    params.require(:manga).permit(:name, :text, :image, :tag)
+    params.require(:manga).permit(:name, :text, :image, :tag_id)
   end
 end
