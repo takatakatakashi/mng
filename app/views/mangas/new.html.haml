@@ -1,6 +1,8 @@
 .form
   = form_for @manga do |f|
-    = f.text_field :text
-    = f.file_field :image
+    = f.text_field :name, placeholder: "漫画のタイトル"
+    = f.text_field :text, placeholder: "おすすめ箇所"
+    = f.file_field :image, placeholder: "画像"
     = f.select :tag_id, [["アクション", 1], ["SF", 2]]
     = f.submit "送信"
+    
