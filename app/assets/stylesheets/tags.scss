@@ -1,3 +1,23 @@
-// Place all the styles related to the tags controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.category{
+  flex-wrap:wrap ;
+  // text-align: center;
+  // justify-content: space-around;
+  display: flex;
+  margin: 50px;
+  .category_1{
+    font-size: ４0px;
+    padding: 0.5em 1em;
+    color: #000;
+    border-radius: 9px;
+  }
+  .category_2{
+    font-size: 30px;
+    width: 80%;
+    height: 80%;
+    padding: 0.5em 1em;
+    font-weight: bold;
+    color: #000;
+    border: solid 3px #6091d3;
+    border-radius: 10px;
+  }
+}

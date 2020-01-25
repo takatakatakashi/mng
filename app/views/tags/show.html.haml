@@ -1,5 +1,7 @@
 .category
   -@mangas.each do |manga|
     %img{height: "500", width: "350", src: manga.image}
-    =manga.name
-    =manga.text
+    .category_1
+      =manga.name
+      .category_2
+        =manga.text
