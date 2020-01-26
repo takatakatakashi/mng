@@ -1,38 +1,38 @@
 .top
-  -# %a.post{:href => "/mangas/new"} 投稿する
+  %a.post{:href => "/mangas/new"} 投稿する
   .top_1
     = link_to "アクション・アドベンチャー", tag_path(1)
     = link_to "SF・ファンタジー", tag_path(2)
-    スポーツ
+    = link_to "スポーツ",tag_path(3)
     .top__1
       = link_to image_tag(src= "kakutou.jpg", class: "kakutou", size: "350x400"), tag_path(1)
       = link_to image_tag(src= "fan.jpg", class: "kakutou", size: "350x400"), tag_path(2)
-      = link_to image_tag(src= "supo-tu.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
+      = link_to image_tag(src= "supo-tu.jpg", class: "kakutou", size: "350x400"), tag_path(3)
   .top_2
-    ヤンキー・任侠
-    ギャンブル
-    ギャグ・コメディー
+    = link_to "ヤンキー・任侠", tag_path(4)
+    = link_to "ギャンブル", tag_path(5)
+    = link_to "ギャグ・コメディー", tag_path(6)
     .top__2
-      = link_to image_tag(src= "yannki-.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
-      = link_to image_tag(src= "gyannburu.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
-      = link_to image_tag(src= "gyagu.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
+      = link_to image_tag(src= "yannki-.jpg", class: "kakutou", size: "350x400"), tag_path(4)
+      = link_to image_tag(src= "gyannburu.jpg", class: "kakutou", size: "350x400"), tag_path(5)
+      = link_to image_tag(src= "gyagu.jpg", class: "kakutou", size: "350x400"), tag_path(6)
   .top_3
-    日常系
-    ヒューマンドラマ
-    職業・ビジネス
+    = link_to "日常系", tag_path(7)
+    = link_to "ヒューマンドラマ", tag_path(8)
+    = link_to "職業・ビジネス", tag_path(9)
     .top__3
-      = link_to image_tag(src= "nitizyou.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
-      = link_to image_tag(src= "kagaku.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
-      = link_to image_tag(src= "bizinesu.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
+      = link_to image_tag(src= "nitizyou.jpg", class: "kakutou", size: "350x400"), tag_path(7)
+      = link_to image_tag(src= "kagaku.jpg", class: "kakutou", size: "350x400"), tag_path(8)
+      = link_to image_tag(src= "bizinesu.jpg", class: "kakutou", size: "350x400"), tag_path(9)
   .top_4
-    恋愛
-    歴史・時代劇
-    グルメ
+    = link_to "恋愛", tag_path(10)
+    = link_to "歴史・時代劇", tag_path(11)
+    = link_to "グルメ", tag_path(12)
     .top__4
-      = link_to image_tag(src= "rennai.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
-      = link_to image_tag(src= "zidai.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
-      = link_to image_tag(src= "gurume.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
+      = link_to image_tag(src= "rennai.jpg", class: "kakutou", size: "350x400"), tag_path(10)
+      = link_to image_tag(src= "zidai.jpg", class: "kakutou", size: "350x400"), tag_path(11)
+      = link_to image_tag(src= "gurume.jpg", class: "kakutou", size: "350x400"), tag_path(12)
     .top_5
-    その他
+    = link_to "その他", tag_path(13)
     .top__5
-      = link_to image_tag(src= "sonota.jpg", class: "kakutou", size: "350x400"), "/mangas/new"
+      = link_to image_tag(src= "sonota.jpg", class: "kakutou", size: "350x400"), tag_path(13)

@@ -24,9 +24,14 @@
     %header.header
       .header__bar.row
         %h1.grid-6
-          %a{:href => "/"} まんが
+          %a{:href => "/"} My Best まんが
         - if user_signed_in?
           .user_nav.grid-6
+          %span
+            = current_user.nickname
+            %ul.user__info
+            %li
+            = link_to "マイページ", "/users/#{current_user.id}"
             = link_to "ログアウト", destroy_user_session_path, method: :delete
             = link_to  "投稿する", "/mangas/new", class: "post"
         - else

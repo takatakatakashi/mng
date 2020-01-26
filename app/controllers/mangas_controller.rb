@@ -2,7 +2,7 @@ class MangasController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @mangas = Manga.all
+    @mangas = Manga.all.includes(:user)
   end
 
   def new
@@ -10,11 +10,12 @@ class MangasController < ApplicationController
   end
 
   def create
-    @manga = Manga.create(manga_params)
+    Mweet.create(manga_params)
+    # @manga = Manga.create(manga_params)
   end
 
   def show
-
+    @manga = Manga.find(params[:id])
   end
 
   def destroy
@@ -33,7 +34,7 @@ class MangasController < ApplicationController
 
   private
   def manga_params
-    params.require(:manga).permit(:name, :text, :image, :tag_id)
+    params.require(:manga).permit(:name, :text, :image, :tag_id).merge(user_id: current_user.id)
   end
 
   def move_to_index

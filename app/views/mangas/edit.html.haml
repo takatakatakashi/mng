@@ -1,0 +1,9 @@
+.form
+  = form_for @manga do |f|
+  %h3
+    編集する
+    = f.text_field :name, placeholder: "漫画のタイトル"
+    = f.text_field :text, placeholder: "おすすめ箇所", rows: "10"
+    = f.file_field :image, placeholder: "画像"
+    = f.select :tag_id, [["アクション", 1], ["SF", 2],["スポーツ", 3],["ヤンキー・任侠", 4],["ギャンブル", 5],["ギャグ・コメディー", 6],["日常系", 7],["ヒューマンドラマ", 8],["職業・ビジネス", 9],["恋愛", 10],["歴史・時代劇", 11],["グルメ", 12],["その他", 13]]
+    = f.submit "送信"

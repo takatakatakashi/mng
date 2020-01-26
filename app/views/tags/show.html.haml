@@ -1,7 +1,15 @@
 .category
   -@mangas.each do |manga|
-    %img{height: "500", width: "350", src: manga.image}
+    %img{height: "600", width: "450", src: manga.image}
     .category_1
-      =manga.name
+      = link_to '詳細', "/mangas/#{manga.id}", method: :get
+      -# - if user_signed_in? && current_user.id == manga.user_id
+      = link_to '編集', "/mangas/#{manga.id}/edit", method: :get
+      = link_to '削除', "/mangas/#{manga.id}", method: :delete, data: { confirm: '削除しますか?' }
       .category_2
-        =manga.text
+        =manga.name
+        .category_3
+          =manga.text
+          -# = paginate(@mangas)
+
+          

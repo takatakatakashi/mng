@@ -1,0 +1,10 @@
+.con
+  %img{height: "600", width: "450", src: @manga.image}
+    .con_1
+      -# - if user_signed_in? && current_user.id == manga.user_id
+      = link_to '編集', "/mangas/#{@manga.id}/edit", method: :get
+      = link_to '削除', "/mangas/#{@manga.id}", method: :delete, data: { confirm: '削除しますか?' }
+      .con_2
+        = @manga.name
+        .con_3
+          = simple_format(@manga.text)

@@ -1,0 +1,8 @@
+.contents
+  %p
+    = @nickname
+    さんの投稿一覧
+  - @mangas.each do |manga|
+    .content_post{:style => "background-image: url(#{manga.image});"}
+      = simple_format(manga.text)
+      %span.name= manga.name
