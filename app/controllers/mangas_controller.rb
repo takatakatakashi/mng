@@ -2,7 +2,7 @@ class MangasController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @mangas = Manga.all.includes(:user)
+    @mangas = Manga.all.includes(:user).order("created_at DESC")
   end
 
   def new

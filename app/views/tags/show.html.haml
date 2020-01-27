@@ -3,13 +3,9 @@
     %img{height: "600", width: "450", src: manga.image}
     .category_1
       = link_to '詳細', "/mangas/#{manga.id}", method: :get
-      -# - if user_signed_in? && current_user.id == manga.user_id
-      = link_to '編集', "/mangas/#{manga.id}/edit", method: :get
-      = link_to '削除', "/mangas/#{manga.id}", method: :delete, data: { confirm: '削除しますか?' }
+        - if user_signed_in? && current_user.id == manga.user_id
       .category_2
         =manga.name
         .category_3
           =manga.text
-          -# = paginate(@mangas)
-
-          
+       
