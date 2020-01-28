@@ -24,7 +24,7 @@ class MangasController < ApplicationController
   end
 
   def edit
-    @manga = Manga.find(params[:id])
+    @manga = Manga.find(manga_params[:id])
   end
 
   def update
