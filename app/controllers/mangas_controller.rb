@@ -10,7 +10,7 @@ class MangasController < ApplicationController
   end
 
   def create
-    Mweet.create(manga_params)
+    Manga.create(manga_params)
     # @manga = Manga.create(manga_params)
   end
 
