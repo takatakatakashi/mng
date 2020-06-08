@@ -11,7 +11,7 @@ class MangasController < ApplicationController
 
   def create
     Manga.create(manga_params)
-    # @manga = Manga.create(manga_params)
+    @manga = Manga.create(manga_params)
   end
 
   def show
